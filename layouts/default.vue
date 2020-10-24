@@ -6,11 +6,13 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <v-btn text>Profile</v-btn>
-        <v-btn text>Background</v-btn>
-        <v-btn text>学習している言語</v-btn>
-        <v-btn text>作品#1</v-btn>
-        <v-btn text>作品#2</v-btn>
+        <v-btn text @click="$vuetify.goTo('#profile')">Profile</v-btn>
+        <v-btn text @click="$vuetify.goTo('#background')">Background</v-btn>
+        <v-btn text @click="$vuetify.goTo('#languages')"
+          >学習している言語</v-btn
+        >
+        <v-btn text @click="$vuetify.goTo('#first-work')">作品#1</v-btn>
+        <v-btn text @click="$vuetify.goTo('#second-work')">作品#2</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <v-main>

@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12">
-      <v-card>
+      <v-card id="profile">
         <v-card-title class="headline">Profile</v-card-title>
 
         <v-row>
@@ -32,7 +32,7 @@
       </v-card>
     </v-col>
 
-    <v-col cols="12">
+    <v-col cols="12" id="background">
       <v-card color="grey">
         <v-card-title class="headline">Background</v-card-title>
 
@@ -65,7 +65,7 @@
       </v-card>
     </v-col>
 
-    <v-col>
+    <v-col cols="12" id="languages">
       <v-card>
         <v-card-title class="headline">学習している言語</v-card-title>
         <v-row justify="center">
@@ -94,20 +94,47 @@
       </v-card>
     </v-col>
 
-    <v-col cols="12">
+    <v-col cols="12" id="first-work">
       <v-card>
         <v-card-title class="headline">作品#1</v-card-title>
 
         <v-card-text
           >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
         >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
       </v-card>
     </v-col>
 
-    <v-col cols="12">
+    <v-col cols="12" id="second-work">
       <v-card>
         <v-card-title class="headline">作品#2</v-card-title>
 
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
+        <v-card-text
+          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
+        >
         <v-card-text
           >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
         >
