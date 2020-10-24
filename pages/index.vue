@@ -33,73 +33,62 @@
     </v-col>
 
     <v-col cols="12">
-      <v-card>
+      <v-card color="grey">
         <v-card-title class="headline">Background</v-card-title>
 
-        <v-card color="grey">
-          <v-row>
-            <v-col cols="10">
-              <v-timeline class="px-5">
-                <v-timeline-item
-                  v-for="(yearMonth, index) in yearMonths"
-                  :color="yearMonth.color"
-                  :key="`${index}-${yearMonth.yearMonth}`"
-                >
-                  <template v-slot:opposite>
-                    <span>
-                      {{ yearMonth.yearMonth }}
-                    </span>
-                  </template>
+        <!-- <v-card color="grey"> -->
+        <v-row justify="center">
+          <v-col cols="10">
+            <v-timeline class="px-5">
+              <v-timeline-item
+                v-for="(yearMonth, index) in yearMonths"
+                :color="yearMonth.color"
+                :key="`${index}-${yearMonth.yearMonth}`"
+              >
+                <template v-slot:opposite>
+                  <span>
+                    {{ yearMonth.yearMonth }}
+                  </span>
+                </template>
 
-                  <v-card>
-                    <v-card-title>{{ yearMonth.title }}</v-card-title>
-                    <v-card-text>
-                      {{ yearMonth.text }}
-                    </v-card-text>
-                  </v-card>
-                </v-timeline-item>
-              </v-timeline>
-            </v-col>
-          </v-row>
-        </v-card>
+                <v-card>
+                  <v-card-title>{{ yearMonth.title }}</v-card-title>
+                  <v-card-text>
+                    {{ yearMonth.text }}
+                  </v-card-text>
+                </v-card>
+              </v-timeline-item>
+            </v-timeline>
+          </v-col>
+        </v-row>
+        <!-- </v-card> -->
       </v-card>
     </v-col>
 
     <v-col>
       <v-card>
         <v-card-title class="headline">学習している言語</v-card-title>
-        <v-row justify="center" align="end">
-          <v-col cols="2" class="text-center">
-            <v-img :src="htmlImage_src" />
-            <h3>HTML</h3>
-          </v-col>
-          <v-col cols="2" class="text-center">
-            <v-img :src="cssImage_src" />
-            <h3>CSS</h3>
-          </v-col>
-
-          <v-col cols="2" class="text-center">
-            <v-img :src="javascriptImage_src" />
-            <h3>JavaScript</h3>
+        <v-row justify="center">
+          <v-col
+            cols="2"
+            class="text-center"
+            v-for="firstImage in firstImages"
+            :key="firstImage.name"
+          >
+            <img :src="firstImage.src" height="150" width="150" />
+            <h3 class="my-3">{{ firstImage.name }}</h3>
           </v-col>
         </v-row>
 
-        <v-row justify="center" align="start">
-          <v-col cols="2" class="text-center">
-            <v-img :src="vueImage_src" />
-            <h3 class="mb-auto">Vue.js</h3>
-          </v-col>
-          <v-col cols="2" class="text-center">
-            <v-img :src="nuxtImage_src" />
-            <h3>Nuxt.js</h3>
-          </v-col>
-          <v-col cols="2" class="text-center">
-            <v-img :src="vuetifyImage_src" />
-            <h3>Vuetify</h3>
-          </v-col>
-          <v-col cols="2" class="text-center">
-            <v-img :src="firebaseImage_src" />
-            <h3>Firebase</h3>
+        <v-row justify="center">
+          <v-col
+            cols="2"
+            class="text-center"
+            v-for="secondImage in secondImages"
+            :key="secondImage.name"
+          >
+            <img :src="secondImage.src" height="150" width="150" />
+            <h3 class="my-3">{{ secondImage.name }}</h3>
           </v-col>
         </v-row>
       </v-card>
@@ -133,13 +122,38 @@ export default {
   data() {
     return {
       image_src: require('~/assets/football.jpg'),
-      htmlImage_src: require('~/assets/html-5.svg'),
-      cssImage_src: require('~/assets/css-3.svg'),
-      javascriptImage_src: require('~/assets/javascript.svg'),
-      vueImage_src: require('~/assets/vue.svg'),
-      vuetifyImage_src: require('~/assets/vuetifyjs.svg'),
-      nuxtImage_src: require('~/assets/nuxt-icon.svg'),
-      firebaseImage_src: require('~/assets/firebase.svg'),
+      firstImages: [
+        {
+          src: require('~/assets/html-5.svg'),
+          name: 'HTML',
+        },
+        {
+          src: require('~/assets/css-3.svg'),
+          name: 'CSS',
+        },
+        {
+          src: require('~/assets/javascript.svg'),
+          name: 'JavaScript',
+        },
+      ],
+      secondImages: [
+        {
+          src: require('~/assets/vue.svg'),
+          name: 'Vue.js',
+        },
+        {
+          src: require('~/assets/vuetifyjs.svg'),
+          name: 'Vuetify.js',
+        },
+        {
+          src: require('~/assets/nuxt-icon.svg'),
+          name: 'Nuxt.js',
+        },
+        {
+          src: require('~/assets/firebase.svg'),
+          name: 'Firebase',
+        },
+      ],
       profile_lists: [
         {
           item: '氏名',
@@ -184,17 +198,23 @@ export default {
         {
           yearMonth: '2015/4',
           color: 'orange',
-          title: 'ファロス個別指導学院入社（アルバイト）',
+          title: 'ファロス個別指導学院　入社（アルバイト）',
           text:
             '興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。興味があったから。',
         },
         {
           yearMonth: '2018/3',
           color: 'green',
+          title: '関西外国語大学　中退',
+          text:
+            '理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。',
         },
         {
           yearMonth: '2020/7',
           color: 'black',
+          title: 'ファロス個別指導学院退社',
+          text:
+            '理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。',
         },
       ],
     }
