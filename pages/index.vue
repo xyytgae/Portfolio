@@ -96,48 +96,90 @@
 
     <v-col cols="12" id="first-work">
       <v-card>
-        <v-card-title class="headline">作品#1</v-card-title>
+        <v-card-title class="headline">{{ work_1.title }}</v-card-title>
+        <v-row>
+          <v-col cols="6">
+            <v-card-text>
+              <h4>
+                【概要】<br />
+                坂道グループから自分の好きなメンバーを選んで、ポイント順にソートしてくれるアプリです。
+              </h4>
 
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
+              <h4>
+                【開発環境】
+                <ul>
+                  <li>Vue.js</li>
+                  <li>Vuetify.js</li>
+                  <li>Firebase（ホスティングのみ）</li>
+                </ul>
+              </h4>
+
+              <h4>
+                【内容】<br />
+                使い方は最初にソートしたいグループを選択後、ソートしたいメンバーを選択します。<br />
+                選択したメンバーが2人ずつ表示されるので、自分の好きな方を選んでいき全ての組み合わせが終了次第、結果が表示されます。<br />
+                類似したアプリは多々ありますが、自分のソートしたいメンバーを最初に選ぶ事が出来るものがなかったのでこのアプリを作ることにしました。<br />
+              </h4>
+            </v-card-text>
+          </v-col>
+          <v-col cols="6" class="text-center align-self-center">
+            <video class="video" :src="work_1.video" controls></video>
+          </v-col>
+        </v-row>
       </v-card>
     </v-col>
 
     <v-col cols="12" id="second-work">
       <v-card>
-        <v-card-title class="headline">作品#2</v-card-title>
+        <v-card-title class="headline">{{ work_2.title }}</v-card-title>
+        <v-row>
+          <v-col cols="6">
+            <v-card-text>
+              <h4>
+                【概要】<br />
+                モルックというボウリングに似たスポーツのスコアを記録するアプリです。<br />
+                簡単に説明すると、モルックという木の棒を投げ50点ちょうどになるように、スコアを積み重ねていくスポーツです。<br />
+                <a target="_blank" href="https://molkky.jp/molkky/"
+                  >詳しいルールはこちらです。</a
+                >(引用：日本モルック協会公式サイト)
+              </h4>
 
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
-        <v-card-text
-          >作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。作品の説明。</v-card-text
-        >
+              <h4>
+                【開発環境】
+                <ul>
+                  <li>
+                    Nuxt.js
+                  </li>
+                  <li>
+                    Vuetify.js
+                  </li>
+                  <li>
+                    Firebase
+                  </li>
+                </ul>
+              </h4>
+
+              <h4>
+                【内容】<br />
+                公式スコアアプリが既にあるのですが、それは自分で他のプレイヤーも含めたスコアを記録することになります。<br />
+                それでは少し不便だと感じ、動画のように自分のスコアだけを入力するだけでリアルタイムで全員のスコアを確認出来るようにアプリを作りました。<br />
+              </h4>
+
+              <h4>
+                【ポイント】
+                <ul>
+                  <li>現在ある部屋や、全員のスコアをリアルタイムで表示</li>
+                  <li>初めて使うユーザーにもわかるよう、進行状況を表示</li>
+                  <li>UIにはVuetify.jsを採用</li>
+                </ul>
+              </h4>
+            </v-card-text>
+          </v-col>
+
+          <v-col cols="6" class="text-center align-self-center">
+            <video class="video" :src="work_2.video" controls></video>
+          </v-col>
+        </v-row>
       </v-card>
     </v-col>
   </v-row>
@@ -244,9 +286,28 @@ export default {
             '理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。理由は～だから。',
         },
       ],
+      work_1: {
+        title: '作品#1「ソートアプリ」',
+        contain: `自分の好きなメンバーを選んでソートが出来るアプリです。`,
+        video: require('~/assets/videos/work-1.mp4'),
+      },
+      work_2: {
+        title: '作品#2「モルックのスコア記録アプリ」',
+        contain: `モルックのスコアを記録するためのアプリです。`,
+        video: require('~/assets/videos/work-2.mp4'),
+      },
     }
   },
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.video {
+  width: 90%;
+  height: 90%;
+}
+
+h4 {
+  margin-bottom: 25px;
+}
+</style>
