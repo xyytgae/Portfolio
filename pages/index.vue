@@ -2,7 +2,7 @@
   <v-row>
     <v-col cols="12">
       <v-card id="profile">
-        <v-card-title class="headline">Profile</v-card-title>
+        <v-card-title class="headline">プロフィール</v-card-title>
 
         <v-row>
           <v-col cols="4" align-self="center">
@@ -33,8 +33,8 @@
     </v-col>
 
     <v-col cols="12" id="background">
-      <v-card color="grey">
-        <v-card-title class="headline">Background</v-card-title>
+      <v-card class="grey lighten-2">
+        <v-card-title class="headline">経歴</v-card-title>
 
         <!-- <v-card color="grey"> -->
         <v-row justify="center">
@@ -95,7 +95,7 @@
     </v-col>
 
     <v-col cols="12" id="first-work">
-      <v-card>
+      <v-card class="grey lighten-2">
         <v-card-title class="headline">{{ work_1.title }}</v-card-title>
         <v-row>
           <v-col cols="6">
@@ -119,6 +119,16 @@
                 使い方は最初にソートしたいグループを選択後、ソートしたいメンバーを選択します。<br />
                 選択したメンバーが2人ずつ表示されるので、自分の好きな方を選んでいき全ての組み合わせが終了次第、結果が表示されます。<br />
                 類似したアプリは多々ありますが、自分のソートしたいメンバーを最初に選ぶ事が出来るものがなかったのでこのアプリを作ることにしました。<br />
+              </h4>
+
+              <h4>
+                【ポイント】
+                <ul>
+                  <li>
+                    選択中のグループが分かりやすいよう、サイト全体のカラーを動的に変化
+                  </li>
+                  <li>UIにはVuetify.jsを採用</li>
+                </ul>
               </h4>
             </v-card-text>
           </v-col>
