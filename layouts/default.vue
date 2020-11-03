@@ -6,8 +6,8 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <v-btn text @click="$vuetify.goTo('#profile')">Profile</v-btn>
-        <v-btn text @click="$vuetify.goTo('#background')">Background</v-btn>
+        <v-btn text @click="$vuetify.goTo('#profile')">プロフィール</v-btn>
+        <v-btn text @click="$vuetify.goTo('#background')">経歴</v-btn>
         <v-btn text @click="$vuetify.goTo('#languages')"
           >学習している言語</v-btn
         >
