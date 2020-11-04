@@ -1,7 +1,7 @@
 <template>
   <v-app dark>
     <v-app-bar app color="primary" dark>
-      <v-toolbar-title>PortfolioSite</v-toolbar-title>
+      <v-toolbar-title>ポートフォリオサイト</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
