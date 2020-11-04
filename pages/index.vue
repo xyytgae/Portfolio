@@ -37,8 +37,6 @@
     <v-col cols="12" id="background">
       <v-card class="grey lighten-1">
         <v-card-title class="headline font-weight-bold">経歴</v-card-title>
-
-        <!-- <v-card color="grey"> -->
         <v-row justify="center">
           <v-col cols="10">
             <v-timeline>
@@ -55,13 +53,6 @@
                   </span>
                 </template>
 
-                <!-- <div>
-                  <h2 :class="`${yearMonth.color}--text`">
-                    {{ yearMonth.title }}
-                  </h2>
-                  <span v-html="yearMonth.text"></span>
-                </div> -->
-
                 <v-card>
                   <v-card-title
                     :class="`font-weight-bold ${yearMonth.color}--text`"
@@ -71,14 +62,12 @@
                     v-html="yearMonth.text"
                     class="font-weight-bold black--text"
                   >
-                    <!-- {{ yearMonth.text }} -->
                   </v-card-text>
                 </v-card>
               </v-timeline-item>
             </v-timeline>
           </v-col>
         </v-row>
-        <!-- </v-card> -->
       </v-card>
     </v-col>
 
@@ -309,7 +298,6 @@ export default {
           yearMonth: '2015/4',
           color: 'orange',
           title: 'ファロス個別指導学院　入社（アルバイト）',
-          // text: '',
         },
         {
           yearMonth: '2018/3',
