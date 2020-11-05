@@ -112,7 +112,21 @@
             <v-card-text>
               <h4>
                 【概要】<br />
-                坂道グループから自分の好きなメンバーを選んで、ポイント順にソートしてくれるアプリです。
+                坂道グループから自分の好きなメンバーを選んで、ポイント順にソートしてくれるアプリです。<br />
+                Github：
+                <a
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  :href="work_1.github"
+                  >{{ work_1.github }}</a
+                >
+                <br />
+                デプロイ：<a
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  :href="work_1.deploy"
+                  >{{ work_1.deploy }}</a
+                >
               </h4>
 
               <h4>
@@ -160,10 +174,28 @@
               <h4>
                 【概要】<br />
                 モルックというボウリングに似たスポーツのスコアを記録するアプリです。<br />
-                簡単に説明すると、モルックという木の棒を投げ50点ちょうどになるように、スコアを積み重ねていくスポーツです。<br />
-                <a target="_blank" href="https://molkky.jp/molkky/"
+                <a
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  href="https://molkky.jp/molkky/"
                   >詳しいルールはこちらです。</a
                 >(引用：日本モルック協会公式サイト)
+                <br />
+                簡単に説明すると、モルックという木の棒を投げ50点ちょうどになるように、スコアを積み重ねていくスポーツです。<br />
+                Github：
+                <a
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  :href="work_2.github"
+                  >{{ work_2.github }}</a
+                >
+                <br />
+                デプロイ：<a
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  :href="work_2.deploy"
+                  >{{ work_2.deploy }}</a
+                >
               </h4>
 
               <h4>
@@ -318,11 +350,15 @@ export default {
         title: '作品#1「ソートアプリ」',
         contain: `自分の好きなメンバーを選んでソートが出来るアプリです。`,
         video: require('~/assets/videos/work-1.mp4'),
+        github: 'https://github.com/xyytgae/sakamichi-sort',
+        deploy: 'https://sakamichi-sort.web.app/',
       },
       work_2: {
         title: '作品#2「モルックのスコア記録アプリ」',
         contain: `モルックのスコアを記録するためのアプリです。`,
         video: require('~/assets/videos/work-2.mp4'),
+        github: 'https://github.com/xyytgae/my-molkky',
+        deploy: 'https://my-molkky.web.app',
       },
     }
   },
