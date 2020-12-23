@@ -1,6 +1,10 @@
 <template>
   <div>
     <v-app-bar app color="primary darken-3" dark>
+      <v-app-bar-nav-icon
+        v-if="$vuetify.breakpoint.xs"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
       <v-toolbar-title>Shimagami's Portfolio</v-toolbar-title>
 
       <v-spacer></v-spacer>
@@ -11,16 +15,11 @@
           text
           class="text-capitalize"
           v-for="button in buttons"
-          @click="$vuetify.goTo(`#${button.id}`)"
+          @click="clickButton(button)"
           :key="button.id"
           >{{ button.text }}</v-btn
         >
       </v-toolbar-items>
-
-      <v-app-bar-nav-icon
-        v-if="$vuetify.breakpoint.xs"
-        @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -34,10 +33,7 @@
         <v-list-item
           v-for="button in buttons"
           :key="button.id"
-          @click="
-            $vuetify.goTo(`#${button.id}`)
-            drawer = false
-          "
+          @click="clickButton(button.id)"
         >
           <v-list-item-action>
             <v-icon>{{ button.icon }}</v-icon>
@@ -75,17 +71,23 @@ export default {
           icon: 'mdi-laptop-windows',
         },
         {
-          id: 'first-work',
+          id: 'firstWork',
           text: 'Work#1',
           icon: 'mdi-numeric-1-circle-outline',
         },
         {
-          id: 'second-work',
+          id: 'secondWork',
           text: 'Work#2',
           icon: 'mdi-numeric-2-circle-outline',
         },
       ],
     }
+  },
+  methods: {
+    clickButton(button) {
+      this.$vuetify.goTo(`#${button.id}`)
+      this.drawer = false
+    },
   },
 }
 </script>
