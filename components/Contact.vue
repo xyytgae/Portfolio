@@ -5,30 +5,17 @@
       ><span class="menu">お問い合わせ</span></v-card-text
     >
 
-    <form name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label>Your Name: <input type="text" name="name"/></label>
-      </p>
-      <p>
-        <label>Your Email: <input type="email" name="email"/></label>
-      </p>
-      <p>
-        <label
-          >Your Role:
-          <select name="role[]" multiple>
-            <option value="leader">Leader</option>
-            <option value="follower">Follower</option>
-          </select></label
-        >
-      </p>
-      <p>
-        <label>Message: <textarea name="message"></textarea></label>
-      </p>
-      <p>
-        <button type="submit">Send</button>
-      </p>
-    </form>
+    <!-- 抜粋です -->
+    <v-text-field v-model="name" label="お名前" required />
+    <v-text-field v-model="email" label="メールアドレス" required />
+    <v-text-field v-model="company" label="会社名（法人の方のみ）" />
+    <v-textarea v-model="message" label="お問い合わせ内容" required />
+    <v-text-field
+      v-model="botfield"
+      label="人間は入力しないでください"
+      v-show="false"
+    />
+    <v-btn color="primary" @click="submit">送信</v-btn>
 
     <!-- <form name="contact" method="POST" netlify>
       <v-form ref="form" v-model="valid">
@@ -104,27 +91,32 @@
 export default {
   data() {
     return {
-      inputItems: [
-        {
-          name: '名前',
-        },
-        {
-          name: 'Email',
-        },
-        {
-          name: '件名',
-        },
-      ],
-      form: {
-        name: '',
-        email: '',
-        title: '',
-        contents: '',
-      },
-      valid: false,
-      loading: false,
-      required: value => !!value || '必須です',
-      message: '送信',
+      name: '',
+      email: '',
+      company: '',
+      message: '',
+      botfield: '',
+      // inputItems: [
+      //   {
+      //     name: '名前',
+      //   },
+      //   {
+      //     name: 'Email',
+      //   },
+      //   {
+      //     name: '件名',
+      //   },
+      // ],
+      // form: {
+      //   name: '',
+      //   email: '',
+      //   title: '',
+      //   contents: '',
+      // },
+      // valid: false,
+      // loading: false,
+      // required: value => !!value || '必須です',
+      // message: '送信',
     }
   },
   methods: {
@@ -132,6 +124,20 @@ export default {
       this.loading = true
       this.$refs.form.reset()
       this.message = '送信成功！！'
+    },
+    async submit() {
+      const params = new FormData()
+      //以下、ダミーフォームの各フォーム要素のnameと合わせる
+      params.append('form-name', 'contact')
+      params.append('name', this.name)
+      params.append('email', this.email)
+      params.append('company', this.company)
+      params.append('message', this.message)
+      params.append('bot-field', this.botfield)
+
+      const response = await this.$axios.$post(window.location.origin, params)
+      //実際はresponseを使って画面側にフィードバックさせるが、ここでは仮にconsoleに出力
+      console.log(response)
     },
   },
 }
