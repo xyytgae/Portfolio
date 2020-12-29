@@ -2,14 +2,16 @@
   <div>
     <v-app-bar app color="primary darken-3" dark>
       <v-app-bar-nav-icon
-        v-if="$vuetify.breakpoint.xs"
+        v-if="$vuetify.breakpoint.sm || $vuetify.breakpoint.xs"
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <v-toolbar-title>Shimagami's Portfolio</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
-      <v-toolbar-items class="d-none d-sm-flex">
+      <v-toolbar-items
+        v-if="!$vuetify.breakpoint.sm && !$vuetify.breakpoint.xs"
+      >
         <v-btn
           x-large
           text
@@ -25,7 +27,7 @@
     <v-navigation-drawer
       right
       color="white"
-      v-if="$vuetify.breakpoint.xs"
+      v-if="$vuetify.breakpoint.sm || $vuetify.breakpoint.xs"
       app
       v-model="drawer"
     >
@@ -78,6 +80,11 @@ export default {
         {
           id: 'secondWork',
           text: 'Work#2',
+          icon: 'mdi-numeric-2-circle-outline',
+        },
+        {
+          id: 'contact',
+          text: 'contact',
           icon: 'mdi-numeric-2-circle-outline',
         },
       ],

@@ -19,6 +19,10 @@
     <v-col cols="12" id="secondWork" class="my-12 inactive">
       <Work2 />
     </v-col>
+
+    <!-- <v-col cols="12" id="contact" class="my-16 inactive">
+      <Contact />
+    </v-col> -->
   </v-row>
 </template>
 
