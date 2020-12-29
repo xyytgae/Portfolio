@@ -30,9 +30,8 @@
       </p>
     </form>
 
-    <form name="contact" method="POST" netlify>
+    <!-- <form name="contact" method="POST" netlify>
       <v-form ref="form" v-model="valid">
-        <!-- <v-container> -->
 
         <v-col cols="12" md="3">
           <v-text-field
@@ -96,16 +95,12 @@
           {{ message }}
         </v-col>
 
-        <!-- </v-container> -->
       </v-form>
-    </form>
+    </form> -->
   </v-card>
 </template>
 
 <script>
-// import firebase from '~/plugins/firebase.js'
-// import { functions } from '@/plugins/firebase'
-
 export default {
   data() {
     return {
