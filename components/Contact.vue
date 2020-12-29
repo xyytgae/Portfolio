@@ -26,14 +26,14 @@
       </p>
     </form> -->
 
-    <form
-      name="contact"
-      netlify-honeypot="bot-field"
-      data-netlify="true"
-      method="post"
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <v-form ref="form" v-model="valid">
+    <v-form ref="form" v-model="valid">
+      <form
+        name="contact"
+        netlify-honeypot="bot-field"
+        data-netlify="true"
+        method="post"
+      >
+        <input type="hidden" name="form-name" value="contact" />
         <v-col cols="12" md="3">
           <v-text-field
             name="name"
@@ -90,8 +90,8 @@
             >送信する</v-btn
           >
         </v-col>
-      </v-form>
-    </form>
+      </form>
+    </v-form>
   </v-card>
 </template>
 
