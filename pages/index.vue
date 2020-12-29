@@ -28,42 +28,31 @@
 
 <script>
 export default {
-  methods: {
-    startObserve() {
-      const callback = (entries, observer) => {
-        console.log(entries.isIntersecting)
-
-        entries.forEach(entry => {
-          console.log(entry.isIntersecting)
-          if (entry.isIntersecting) {
-            // 初めにopacitty: 0にしていたinactiveクラスを取り除く
-            entry.target.classList.remove('inactive')
-
-            // activeクラスを追加することでフェードインさせる
-            entry.target.classList.add('active')
-            console.log('追加！！！')
-          }
-        })
-      }
-
-      const option = {
-        threshold: [0.2, 1.0],
-      }
-
-      const observer = new IntersectionObserver(callback, option)
-
-      const targets = document.querySelectorAll('.inactive')
-      targets.forEach(target => {
-        observer.observe(target)
-        console.log(target)
-      })
-    },
-  },
-  mounted() {
-    window.onload = () => {
-      this.startObserve()
-    }
-  },
+  // methods: {
+  //   startObserve() {
+  //     const callback = (entries, observer) => {
+  //       entries.forEach(entry => {
+  //         if (entry.isIntersecting) {
+  //           entry.target.classList.remove('inactive')
+  //           entry.target.classList.add('active')
+  //         }
+  //       })
+  //     }
+  //     const option = {
+  //       threshold: [0.2, 1.0],
+  //     }
+  //     const observer = new IntersectionObserver(callback, option)
+  //     const targets = document.querySelectorAll('.inactive')
+  //     targets.forEach(target => {
+  //       observer.observe(target)
+  //     })
+  //   },
+  // },
+  // mounted() {
+  //   window.onload = () => {
+  //     this.startObserve()
+  //   }
+  // },
 }
 </script>
 
@@ -99,23 +88,23 @@ h4 {
   margin-bottom: 15px;
 }
 
-.inactive {
-  opacity: 0;
-}
+// .inactive {
+//   opacity: 0;
+// }
 
-@keyframes fadeRight {
-  0% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
+// @keyframes fadeRight {
+//   0% {
+//     opacity: 0;
+//     transform: translateX(300px);
+//   }
 
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+//   100% {
+//     opacity: 1;
+//     transform: translateX(0);
+//   }
+// }
 
-.active {
-  animation: fadeRight 4s ease 0s 1 normal;
-}
+// .active {
+//   animation: fadeRight 4s ease 0s 1 normal;
+// }
 </style>
