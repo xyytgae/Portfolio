@@ -32,69 +32,69 @@
       data-netlify="true"
       method="post"
     >
-      <v-form ref="form" v-model="valid">
-        <v-col cols="12" md="3">
-          <v-text-field
-            name="name"
-            outlined
-            shaped
-            :rules="[required]"
-            color="orange"
-            v-model="form.name"
-            label="なまえ"
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="3">
-          <v-text-field
-            name="email"
-            outlined
-            shaped
-            :rules="[required]"
-            color="orange"
-            v-model="form.email"
-            label="Email"
-          ></v-text-field>
-        </v-col>
-        <v-col cols="12" md="3">
-          <v-text-field
-            name="title"
-            outlined
-            shaped
-            :rules="[required]"
-            color="orange"
-            v-model="form.title"
-            label="件名"
-          ></v-text-field>
-        </v-col>
+      <!-- <v-form ref="form" v-model="valid"> -->
+      <v-col cols="12" md="3">
+        <v-text-field
+          name="name"
+          outlined
+          shaped
+          :rules="[required]"
+          color="orange"
+          v-model="form.name"
+          label="なまえ"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-text-field
+          name="email"
+          outlined
+          shaped
+          :rules="[required]"
+          color="orange"
+          v-model="form.email"
+          label="Email"
+        ></v-text-field>
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-text-field
+          name="title"
+          outlined
+          shaped
+          :rules="[required]"
+          color="orange"
+          v-model="form.title"
+          label="件名"
+        ></v-text-field>
+      </v-col>
 
-        <v-col cols="12" md="10">
-          <v-textarea
-            name="message"
-            outlined
-            shaped
-            :rules="[required]"
-            color="orange"
-            v-model="form.contents"
-            label="お問い合わせ内容"
-          ></v-textarea>
-        </v-col>
+      <v-col cols="12" md="10">
+        <v-textarea
+          name="message"
+          outlined
+          shaped
+          :rules="[required]"
+          color="orange"
+          v-model="form.contents"
+          label="お問い合わせ内容"
+        ></v-textarea>
+      </v-col>
 
-        <v-col class="text-center">
-          <v-btn
-            type="”submit”"
-            color="orange"
-            :disabled="!valid || loading"
-            :loading="loading"
-            :dark="valid"
-            x-large
-            >送信する</v-btn
-          >
-        </v-col>
-        <!-- 
+      <v-col class="text-center">
+        <v-btn
+          type="”submit”"
+          color="orange"
+          :disabled="!valid || loading"
+          :loading="loading"
+          :dark="valid"
+          x-large
+          >送信する</v-btn
+        >
+      </v-col>
+      <!-- 
         <v-col class="text-center">
           {{ message }}
         </v-col> -->
-      </v-form>
+      <!-- </v-form> -->
     </form>
   </v-card>
 </template>
