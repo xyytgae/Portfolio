@@ -5,8 +5,29 @@
       ><span class="menu">お問い合わせ</span></v-card-text
     >
 
+    <form
+      name="contact"
+      netlify-honeypot="bot-field"
+      data-netlify="true"
+      method="post"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden" style="display: none;">
+        <label>Don’t fill this out: <input name="bot-field"/></label>
+      </p>
+      <p>
+        <label>Email: <input type="text" name="name"/></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message"></textarea></label>
+      </p>
+      <p>
+        <button type="”submit”">Send</button>
+      </p>
+    </form>
+
     <!-- 抜粋です -->
-    <v-text-field v-model="name" label="お名前" required />
+    <!-- <v-text-field v-model="name" label="お名前" required />
     <v-text-field v-model="email" label="メールアドレス" required />
     <v-text-field v-model="company" label="会社名（法人の方のみ）" />
     <v-textarea v-model="message" label="お問い合わせ内容" required />
@@ -15,7 +36,7 @@
       label="人間は入力しないでください"
       v-show="false"
     />
-    <v-btn color="primary" @click="submit">送信</v-btn>
+    <v-btn color="primary" @click="submit">送信</v-btn> -->
 
     <!-- <form name="contact" method="POST" netlify>
       <v-form ref="form" v-model="valid">
