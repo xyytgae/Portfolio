@@ -4,7 +4,7 @@
       <Profile />
     </v-col>
 
-    <v-col cols="12" id="background" class="my-12 inactive">
+    <v-col cols="12" id="background" class="my-12 active">
       <Background />
     </v-col>
 
@@ -31,13 +31,17 @@ export default {
   methods: {
     startObserve() {
       const callback = (entries, observer) => {
+        console.log(entries.isIntersecting)
+
         entries.forEach(entry => {
+          console.log(entry.isIntersecting)
           if (entry.isIntersecting) {
             // 初めにopacitty: 0にしていたinactiveクラスを取り除く
             entry.target.classList.remove('inactive')
 
             // activeクラスを追加することでフェードインさせる
             entry.target.classList.add('active')
+            console.log('追加！！！')
           }
         })
       }
@@ -51,6 +55,7 @@ export default {
       const targets = document.querySelectorAll('.inactive')
       targets.forEach(target => {
         observer.observe(target)
+        console.log(target)
       })
     },
   },
