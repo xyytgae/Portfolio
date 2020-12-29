@@ -32,6 +32,10 @@
       data-netlify="true"
       method="post"
     >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden" style="display: none;">
+        <label>Don’t fill this out: <input name="bot-field"/></label>
+      </p>
       <!-- <v-form ref="form" v-model="valid"> -->
       <v-col cols="12" md="3">
         <v-text-field
