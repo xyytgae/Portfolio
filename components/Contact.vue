@@ -10,6 +10,7 @@
 
         <v-col cols="12" md="3">
           <v-text-field
+            type="hidden"
             outlined
             shaped
             :rules="[required]"
@@ -20,6 +21,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <v-text-field
+            type="hidden"
             outlined
             shaped
             :rules="[required]"
@@ -30,6 +32,7 @@
         </v-col>
         <v-col cols="12" md="3">
           <v-text-field
+            type="hidden"
             outlined
             shaped
             :rules="[required]"
@@ -41,6 +44,7 @@
 
         <v-col cols="12" md="10">
           <v-textarea
+            type="hidden"
             outlined
             shaped
             :rules="[required]"
