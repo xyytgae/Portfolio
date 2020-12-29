@@ -126,7 +126,7 @@ export default {
         title: '',
         contents: '',
       },
-      valid: false,
+      valid: true,
       loading: false,
       required: value => !!value || '必須です',
       message: '送信',
