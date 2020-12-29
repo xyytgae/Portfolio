@@ -62,11 +62,11 @@ export default {
         },
       ],
       profile_link_lists: [
-        {
-          item: 'Contact',
-          content: 'Email',
-          link: 'mailto:xyytgae@gmail.com',
-        },
+        // {
+        //   item: 'Contact',
+        //   content: 'Email',
+        //   link: 'mailto:xyytgae@gmail.com',
+        // },
         {
           item: 'Github',
           content: 'xyytgae',
