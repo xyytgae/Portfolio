@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-col cols="12" id="profile" class="my-12 inactive">
+    <v-col cols="12" id="profile" class="my-12 active">
       <Profile />
     </v-col>
 
@@ -20,9 +20,9 @@
       <Work2 />
     </v-col>
 
-    <!-- <v-col cols="12" id="contact" class="my-16 inactive">
+    <v-col cols="12" id="contact" class="my-16 inactive">
       <Contact />
-    </v-col> -->
+    </v-col>
   </v-row>
 </template>
 
