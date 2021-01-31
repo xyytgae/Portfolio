@@ -53,7 +53,7 @@ export default {
   //     this.startObserve()
   //   }
   // },
-};
+}
 </script>
 
 <style lang="scss">

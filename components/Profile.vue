@@ -43,49 +43,49 @@
 export default {
   data() {
     return {
-      image_src: require("~/assets/football.jpg"),
+      image_src: require('~/assets/football.jpg'),
       profile_lists: [
         {
-          item: "氏名",
-          content: "島上 翔（しまがみ つばさ）"
+          item: '氏名',
+          content: '島上 翔（しまがみ つばさ）',
         },
         {
-          item: "生年月日",
-          content: "1997年3月31日（23歳）"
+          item: '生年月日',
+          content: '1997年3月31日（23歳）',
         },
         {
-          item: "性別",
-          content: "男"
+          item: '性別',
+          content: '男',
         },
         {
-          item: "趣味",
-          content: "サッカー観戦"
+          item: '趣味',
+          content: 'サッカー観戦',
         },
         {
-          item: "資格",
-          content: "珠算検定1級、暗算検定準初段"
-        }
+          item: '資格',
+          content: '珠算検定1級、暗算検定準初段',
+        },
       ],
       profile_link_lists: [
         {
-          item: "Github",
-          link: "https://github.com/xyytgae",
-          icon: require("~/assets/images/link_icons/github.png")
+          item: 'Github',
+          link: 'https://github.com/xyytgae',
+          icon: require('~/assets/images/link_icons/github.png'),
         },
         {
-          item: "Twitter",
-          link: "https://twitter.com/wing_1008",
-          icon: require("~/assets/images/link_icons/twitter.png")
+          item: 'Twitter',
+          link: 'https://twitter.com/wing_1008',
+          icon: require('~/assets/images/link_icons/twitter.png'),
         },
         {
-          item: "Qiita",
-          link: "https://qiita.com/Shimagami",
-          icon: require("~/assets/images/link_icons/qiita.png")
-        }
-      ]
-    };
-  }
-};
+          item: 'Qiita',
+          link: 'https://qiita.com/Shimagami',
+          icon: require('~/assets/images/link_icons/qiita.png'),
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <style scoped>
