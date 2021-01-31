@@ -19,15 +19,20 @@
             <span>{{ profile_list.content }} </span>
           </p>
 
-          <p
-            v-for="profile_link_list in profile_link_lists"
-            :key="profile_link_list.item"
-          >
-            <span>{{ profile_link_list.item }}：</span>
-            <a :href="profile_link_list.link">{{
-              profile_link_list.content
-            }}</a>
-          </p>
+          <div>
+            <v-btn
+              v-for="profile_link_list in profile_link_lists"
+              :key="profile_link_list.item"
+              :href="profile_link_list.link"
+              target="_blank"
+              rel="nooopener noreferrer"
+              class="mr-2 text-none px-2"
+            >
+              <img :src="profile_link_list.icon" class="mr-1 icon" />{{
+                profile_link_list.item
+              }}</v-btn
+            >
+          </div>
         </v-card-text>
       </v-col>
     </v-row>
@@ -62,18 +67,30 @@ export default {
         },
       ],
       profile_link_lists: [
-        // {
-        //   item: 'Contact',
-        //   content: 'Email',
-        //   link: 'mailto:xyytgae@gmail.com',
-        // },
         {
           item: 'Github',
-          content: 'xyytgae',
           link: 'https://github.com/xyytgae',
+          icon: require('~/assets/images/link_icons/github.png'),
+        },
+        {
+          item: 'Twitter',
+          link: 'https://twitter.com/wing_1008',
+          icon: require('~/assets/images/link_icons/twitter.png'),
+        },
+        {
+          item: 'Qiita',
+          link: 'https://qiita.com/Shimagami',
+          icon: require('~/assets/images/link_icons/qiita.png'),
         },
       ],
     }
   },
 }
 </script>
+
+<style scoped>
+.icon {
+  height: 24px;
+  width: auto;
+}
+</style>
