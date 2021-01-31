@@ -43,7 +43,7 @@
             color="orange"
             v-model="form.name"
             label="名前"
-          ></v-text-field>
+           />
         </v-col>
         <v-col cols="12" md="3">
           <v-text-field

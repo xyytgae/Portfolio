@@ -19,15 +19,20 @@
             <span>{{ profile_list.content }} </span>
           </p>
 
-          <p
-            v-for="profile_link_list in profile_link_lists"
-            :key="profile_link_list.item"
-          >
-            <span>{{ profile_link_list.item }}：</span>
-            <a :href="profile_link_list.link">{{
-              profile_link_list.content
-            }}</a>
-          </p>
+          <div>
+            <v-btn
+              v-for="profile_link_list in profile_link_lists"
+              :key="profile_link_list.item"
+              :href="profile_link_list.link"
+              target="_blank"
+              rel="nooopener noreferrer"
+              class="mr-2 text-none px-2"
+            >
+              <img :src="profile_link_list.icon" class="mr-1 icon" />{{
+                profile_link_list.item
+              }}</v-btn
+            >
+          </div>
         </v-card-text>
       </v-col>
     </v-row>
@@ -38,42 +43,54 @@
 export default {
   data() {
     return {
-      image_src: require('~/assets/football.jpg'),
+      image_src: require("~/assets/football.jpg"),
       profile_lists: [
         {
-          item: '氏名',
-          content: '島上 翔（しまがみ つばさ）',
+          item: "氏名",
+          content: "島上 翔（しまがみ つばさ）"
         },
         {
-          item: '生年月日',
-          content: '1997年3月31日（23歳）',
+          item: "生年月日",
+          content: "1997年3月31日（23歳）"
         },
         {
-          item: '性別',
-          content: '男',
+          item: "性別",
+          content: "男"
         },
         {
-          item: '趣味',
-          content: 'サッカー観戦',
+          item: "趣味",
+          content: "サッカー観戦"
         },
         {
-          item: '資格',
-          content: '珠算検定1級、暗算検定準初段',
-        },
+          item: "資格",
+          content: "珠算検定1級、暗算検定準初段"
+        }
       ],
       profile_link_lists: [
-        // {
-        //   item: 'Contact',
-        //   content: 'Email',
-        //   link: 'mailto:xyytgae@gmail.com',
-        // },
         {
-          item: 'Github',
-          content: 'xyytgae',
-          link: 'https://github.com/xyytgae',
+          item: "Github",
+          link: "https://github.com/xyytgae",
+          icon: require("~/assets/images/link_icons/github.png")
         },
-      ],
-    }
-  },
-}
+        {
+          item: "Twitter",
+          link: "https://twitter.com/wing_1008",
+          icon: require("~/assets/images/link_icons/twitter.png")
+        },
+        {
+          item: "Qiita",
+          link: "https://qiita.com/Shimagami",
+          icon: require("~/assets/images/link_icons/qiita.png")
+        }
+      ]
+    };
+  }
+};
 </script>
+
+<style scoped>
+.icon {
+  height: 24px;
+  width: auto;
+}
+</style>
